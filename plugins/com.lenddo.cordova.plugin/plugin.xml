@@ -1,0 +1,40 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+  <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+          id="com.lenddo.cordova.plugin" version="0.1">
+      <name>Lenddo</name>
+      <description>Lenddo Cordova Plugin</description>
+      <license>Apache 2.0</license>
+
+      <keywords>lenddo</keywords>
+
+      <asset src="css" target="css/lenddo" />
+      <asset src="images" target="img/lenddo" />
+
+      <js-module src="verify.js" name="verify" target="phonegap/plugin/lenddo/verify.js">
+          <clobbers target="verify" />
+      </js-module>
+
+      <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LenddoCordova">
+                <param name="android-package" value="com.lenddo.cordova.plugin.LenddoCordova"/>
+            </feature>
+        </config-file>
+
+        <source-file src="platforms/android/res/values/lenddo.xml" target-dir="res/values" />
+        <config-file target="res/values/lenddo.xml" parent="/*">
+            <string name="lenddo_app_id"></string>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="application">
+          <meta-data android:name="lenddoAppId" android:value="@string/lenddo_app_id"/>
+        </config-file>
+
+        <source-file src="platforms/android/src/com/lenddo/cordova/plugin/LenddoCordova.java"
+          target-dir="src/com/lenddo/cordova/plugin" />
+
+        <framework src="platforms/android/LenddoSDK" custom="true" />
+        <framework src="platforms/android/google-play-services_lib" custom="true" />
+      </platform>
+  </plugin>

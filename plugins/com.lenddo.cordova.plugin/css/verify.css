@@ -1,0 +1,254 @@
+#lenddo_verify .lenddo_verify_button {
+  position: relative;
+}
+
+#lenddo_verify .lenddo_verify_button .tooltip {
+  background: rgba(0,0,0,0.8);
+  bottom: 100%;
+  color: #fff;
+  display: none;
+  left: 0;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: auto;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  text-align: center;
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+#lenddo_verify .lenddo_verify_button .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* CSS Triangles - see Trevor's post */
+#lenddo_verify .lenddo_verify_button .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid rgba(0,0,0,0.8) 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+
+#lenddo_verify .lenddo_verify_button:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  display: block!important;
+}
+
+/* IE can just show/hide with no transition */
+.lte8 #lenddo_verify .lenddo_verify_button .tooltip {
+  display: none;
+}
+
+.lte8 #lenddo_verify .lenddo_verify_button:hover .tooltip {
+  display: block;
+}
+
+#lenddo_verify .lenddo_verify_button{
+  cursor : pointer;  /*forces the cursor to change to a hand when the button is hovered*/
+}
+
+#lenddo_verify .lenddo_verify_button.blue_green_button{
+  float : left;
+  background : #3e9cbf url("../../img/lenddo/lenddo-logo.png");  /* the colour of the button*/
+  background-size: 100px;
+  background-repeat: no-repeat;
+  padding : 8px 24px 10px 10%;  /* apply some padding inside the button*/
+  border : 1px solid #3e9cbf;  /*required or the default border for the browser will appear*/
+  /*style the text*/
+  font-size : 1.5em;
+  font-family : Helvetica Neue,Helvetica,Arial,sans-serif;
+  letter-spacing : .05em;
+  text-shadow : 0 -1px 0px rgba(0, 0, 0, 0.3);  /*give the text a shadow - doesnt appear in Opera 12.02 or earlier*/
+  text-align : right;
+  color : #fff;
+  /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+  -webkit-box-shadow : inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+  -moz-box-shadow : inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+  box-shadow : inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+  /*give the corners a small curve*/
+  -moz-border-radius : 10px;
+  -webkit-border-radius : 10px;
+  border-radius : 10px;
+}
+
+#lenddo_verify .lenddo_verify_button.blue_green_button:hover{
+  color : #dfe7ea;
+  /*reduce the size of the shadow to give a pushed effect*/
+  -webkit-box-shadow : inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+  -moz-box-shadow : inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+  box-shadow : inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;;
+}
+
+#lenddo_verify .lenddo_verify_button.blue_button{
+  border: 0;
+  padding: 10px 16px;
+  font-size: 18px;
+  font-family : Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height: 1.5;
+  border-radius: 24px;
+  background-color: #2069d0;
+  background-image: -webkit-linear-gradient(left, color-stop(#0061b2 0%), color-stop(#1953a4 100%));
+  background-image: linear-gradient(to right, #0061b2 0%, #1953a4 100%);
+  background-repeat: repeat-x;
+  text-align: center;
+  color: #fff;
+}
+
+#lenddo_verify .lenddo_verify_button.blue_get_verified{
+  font-size: 18px;
+  padding: 12px 20px 12px 80px;
+  background-image: url("../../img/lenddo/lenddo-logo.png");
+  background-position: 15px 8px;
+  background-repeat: no-repeat;
+  background-size: 56px 30px;
+  text-align: left;
+  color: #fff;
+  background-color: #1953a4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 0;
+}
+
+#lenddo_verify .lenddo_verify_button.blue_get_verified:hover{
+  background-color: #084293;
+}
+
+
+.lenddo_verify_address_button{
+  font-size: 14px;
+  padding: 10px 30px 10px 55px;
+  background-image: url("../../img/lenddo/map-marker.png");
+  background-position: 30px 11px;
+  background-repeat: no-repeat;
+  text-align: right;
+  color: #fff;
+  background-color: #1953a4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#lenddo_verify_address_modal{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.7);
+  z-index:10000;
+}
+
+
+#lenddo_verify_address_modal div{
+  background:#fff;
+  width:90%;
+  max-width:700px;
+  border:solid 1px #000;
+  margin:100px auto;
+  height:500px;
+}
+
+
+/* overlay */
+#lenddo_location_dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* dialog container */
+#lenddo_location_dialog > .lenddo_modal {
+  position: relative;
+  padding: 0;
+  margin: 5% auto;
+  background: #E8EEF0;
+  width: 600px;
+  height: 400px;
+}
+
+/* dialog close button */
+#lenddo_location_dialog a {
+  background: #2d4a70 url("../../img/lenddo/btn_close.png") center center no-repeat;
+  font-family: Helvetica, Arial, sans-serif;
+  position: absolute;
+  right: -19px;
+  top: -19px;
+  width: 38px;
+  line-height: 38px;
+  text-decoration: none;
+  font-weight: normal;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #333;
+  text-transform: lowercase;
+  cursor: pointer;
+  width:38px;
+  height:38px;
+  text-indent: -9999em;
+  -moz-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+  -o-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+  -webkit-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+#lenddo_location_dialog a:hover {
+  background-color: #3e56a5;
+}
+
+/* dialog iframe */
+#lenddo_location_dialog iframe{
+  border:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  display: block;
+}
